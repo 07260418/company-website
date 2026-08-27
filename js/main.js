@@ -264,14 +264,14 @@ document.documentElement.classList.add('js');
     var mapObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          setTimeout(revealRoutes, 300);
+          setTimeout(revealRoutes, 800);
           mapObserver.disconnect();
         }
       });
     }, { threshold: 0.15 });
     mapObserver.observe(container);
   } else {
-    setTimeout(revealRoutes, 300);
+    setTimeout(revealRoutes, 800);
   }
 })();
 
