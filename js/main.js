@@ -198,13 +198,8 @@ document.documentElement.classList.add('js');
   var routePaths = container.querySelectorAll('.routes-layer path');
   var routeShips = container.querySelectorAll('.routes-layer circle');
   var routeCount = routePaths.length;
-  var dotsLayer = container.querySelector('.dots-layer');
 
-  /* 初始隐藏：陆地点阵 + 航线 + 船 */
-  if (dotsLayer) {
-    dotsLayer.style.opacity = 0;
-    dotsLayer.style.transition = 'opacity 0.8s ease';
-  }
+  /* 初始：只隐藏航线和货轮，地图底图+港口+标签保持可见 */
   routePaths.forEach(function (p) {
     var len = p.getTotalLength() || 600;
     p.style.strokeDasharray = len;
@@ -217,61 +212,33 @@ document.documentElement.classList.add('js');
   });
 
   function revealRoutes() {
-    /* 1. 陆地点阵先淡入 */
-    if (dotsLayer) {
-      dotsLayer.style.transition = 'opacity 1s ease';
-      dotsLayer.style.opacity = 1;
-    }
-
-    /* 2. 航线逐条描出 */
+    /* 1. 航线逐条描出 */
     routePaths.forEach(function (p, i) {
       p.style.transition = 'stroke-dashoffset 1.6s cubic-bezier(0.4, 0, 0.2, 1)';
-      p.style.transitionDelay = (0.4 + i * 0.15) + 's';
+      p.style.transitionDelay = (i * 0.15) + 's';
       p.style.strokeDashoffset = 0;
     });
 
-    /* 3. 货轮光点跟在航线后出现 */
+    /* 2. 货轮光点跟在航线后出现 */
     routeShips.forEach(function (s, i) {
       s.style.transition = 'opacity 0.5s ease';
-      s.style.transitionDelay = (0.4 + routeCount * 0.15 + 0.6 + i * 0.08) + 's';
+      s.style.transitionDelay = (routeCount * 0.15 + 0.6 + i * 0.08) + 's';
       s.style.opacity = 0.95;
     });
-
-    /* 4. 港口标签淡入 */
-    var portsLayer = container.querySelector('#portsLayer');
-    var labelsLayer = container.querySelector('#labelsLayer');
-    if (portsLayer) {
-      portsLayer.style.opacity = 0;
-      portsLayer.style.transition = 'opacity 0.8s ease';
-      portsLayer.style.transitionDelay = (0.4 + routeCount * 0.15 + 0.3) + 's';
-      portsLayer.style.opacity = 1;
-    }
-    if (labelsLayer) {
-      labelsLayer.style.opacity = 0;
-      labelsLayer.style.transition = 'opacity 0.8s ease';
-      labelsLayer.style.transitionDelay = (0.4 + routeCount * 0.15 + 0.5) + 's';
-      labelsLayer.style.opacity = 1;
-    }
   }
-
-  /* 初始隐藏港口层 */
-  var portsLayerInit = container.querySelector('#portsLayer');
-  var labelsLayerInit = container.querySelector('#labelsLayer');
-  if (portsLayerInit) portsLayerInit.style.opacity = 0;
-  if (labelsLayerInit) labelsLayerInit.style.opacity = 0;
 
   if ('IntersectionObserver' in window) {
     var mapObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          setTimeout(revealRoutes, 800);
+          setTimeout(revealRoutes, 1000);
           mapObserver.disconnect();
         }
       });
     }, { threshold: 0.15 });
     mapObserver.observe(container);
   } else {
-    setTimeout(revealRoutes, 800);
+    setTimeout(revealRoutes, 1000);
   }
 })();
 
