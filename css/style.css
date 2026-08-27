@@ -1180,12 +1180,12 @@ button {
   transform: translateX(40px);
 }
 
-.reveal.reveal-right .media-frame {
-  transform: scale(0.85);
-  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+.reveal.reveal-right .media-frame > img {
+  transform: scale(1.25);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.reveal.reveal-right.in-view .media-frame {
+.reveal.reveal-right.in-view .media-frame > img {
   transform: scale(1);
 }
 
