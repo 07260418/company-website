@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>订单系统 · EDI 供应链协同平台</title>
+  <meta name="description" content="惠发云：团餐、流通、海外，专业高效的全链路一体化订单系统" />
+  <link rel="stylesheet" href="css/style.css?v=20260826a" />
+</head>
+<body>
+
+  <!-- 返回首页（浮动，不占用导航位） -->
+  <a class="back-home" href="index.html" aria-label="返回首页">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m12 19-7-7 7-7" />
+      <path d="M19 12H5" />
+    </svg>
+    <span class="back-home-tip">返回首页</span>
+  </a>
+
+  <!-- ============================================================
+       订单系统（独立模块页）
+  ============================================================ -->
+    <section class="section bg-white" id="order">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">订单系统</h2>
+        <p class="section-subtitle">专业、高效、全链路一体化</p>
+      </header>
+
+      <div class="order-grid">
+        <!-- 左侧 Tab -->
+        <div class="order-tabs reveal reveal-left">
+          <button class="tab-btn active" data-tab="团餐">团餐</button>
+          <button class="tab-btn" data-tab="流通">流通</button>
+          <button class="tab-btn" data-tab="海外">海外</button>
+        </div>
+
+        <!-- 右侧卡片 -->
+        <div class="order-card reveal reveal-right">
+          <div class="order-inner">
+            <div class="order-content">
+              <h3 id="orderTitle">惠发云</h3>
+              <div class="order-features" id="orderFeatures">
+                <div class="order-feature">
+                  <img src="images/order/checkmark.png" alt="" />
+                  <span>全产业链覆盖</span>
+                </div>
+                <div class="order-feature">
+                  <img src="images/order/checkmark.png" alt="" />
+                  <span>深度产业赋能</span>
+                </div>
+                <div class="order-feature">
+                  <img src="images/order/checkmark.png" alt="" />
+                  <span>数字化与智能化</span>
+                </div>
+                <div class="order-feature">
+                  <img src="images/order/checkmark.png" alt="" />
+                  <span>精准数据分析智配库存与发货</span>
+                </div>
+              </div>
+              <div class="order-btn-wrap">
+                <a href="index.html" class="btn-outline">
+                  点击进入
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- 右侧示意图 + AI 洞察 -->
+            <div class="order-demo">
+              <img src="images/order/dashboard-demo.gif" alt="惠发云订单系统界面" class="order-demo-img" />
+              <div class="ai-panel">
+                <div class="ai-header">
+                  <div class="ai-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                      <path d="M20 3v4" />
+                      <path d="M22 5h-4" />
+                      <path d="M4 17v2" />
+                      <path d="M5 18H3" />
+                    </svg>
+                  </div>
+                  <span class="ai-title">AI 洞察</span>
+                  <span class="ai-live">
+                    <span class="ai-dot"></span>
+                    实时分析
+                  </span>
+                </div>
+                <div class="ai-text" id="aiText"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js?v=20260826a"></script>
+</body>
+</html>

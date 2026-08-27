@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>物流 · EDI 供应链协同平台</title>
+  <meta name="description" content="34+ 合作航线、120+ 覆盖国家，智慧物流链通全球" />
+  <link rel="stylesheet" href="css/style.css?v=20260826a" />
+</head>
+<body>
+
+  <!-- 返回首页（浮动，不占用导航位） -->
+  <a class="back-home" href="index.html" aria-label="返回首页">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="m12 19-7-7 7-7" />
+      <path d="M19 12H5" />
+    </svg>
+    <span class="back-home-tip">返回首页</span>
+  </a>
+
+  <!-- ============================================================
+       物流（独立模块页）
+  ============================================================ -->
+    <section class="section bg-white section-logistics" id="logistics">
+    <div class="container">
+      <header class="section-header reveal">
+        <h2 class="section-title">物流</h2>
+        <p class="section-subtitle">打破地域壁垒，智慧物流链通全球</p>
+      </header>
+
+      <div class="logistics-grid">
+        <!-- 左侧文案 -->
+        <div class="logistics-text reveal reveal-left">
+          <p class="logistics-lead">全球各大船公司保驾护航</p>
+          <p class="hero-desc mb-10">
+            确保中国优质产品高效触达全球消费者，同时引入海外优质产品，
+            构建双向畅通的国际物流通道。
+          </p>
+
+          <!-- 数据统计：2×2 排列 -->
+          <a href="finance.html" class="btn-logistics">
+            点击进入 →
+          </a>
+
+          <div class="logistics-stats">
+            <div class="log-stat">
+              <span class="log-stat-label">合作航线</span>
+              <span class="log-stat-value">34+</span>
+            </div>
+            <div class="log-stat">
+              <span class="log-stat-label">覆盖国家</span>
+              <span class="log-stat-value">120+</span>
+            </div>
+            <div class="log-stat">
+              <span class="log-stat-label">年吞吐量（吨）</span>
+              <span class="log-stat-value">200w+</span>
+            </div>
+            <div class="log-stat">
+              <span class="log-stat-label">合作伙伴</span>
+              <span class="log-stat-value">30+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧：全球航线地图（JS 渲染） -->
+        <div class="logistics-map reveal reveal-right">
+          <div id="worldMap" class="map-wrap" role="img" aria-label="全球物流航线网络地图"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/world-map-data.js?v=20260826a"></script>
+  <script src="js/main.js?v=20260826a"></script>
+</body>
+</html>
