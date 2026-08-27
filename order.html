@@ -5,18 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>订单系统 · EDI 供应链协同平台</title>
   <meta name="description" content="惠发云：团餐、流通、海外，专业高效的全链路一体化订单系统" />
-  <link rel="stylesheet" href="css/style.css?v=20260826a" />
+  <link rel="stylesheet" href="css/style.css?v=20260827g" />
 </head>
 <body>
-
-  <!-- 返回首页（浮动，不占用导航位） -->
-  <a class="back-home" href="index.html" aria-label="返回首页">
-    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
-    </svg>
-    <span class="back-home-tip">返回首页</span>
-  </a>
 
   <!-- ============================================================
        订单系统（独立模块页）
@@ -31,9 +22,24 @@
       <div class="order-grid">
         <!-- 左侧 Tab -->
         <div class="order-tabs reveal reveal-left">
-          <button class="tab-btn active" data-tab="团餐">团餐</button>
-          <button class="tab-btn" data-tab="流通">流通</button>
-          <button class="tab-btn" data-tab="海外">海外</button>
+          <button class="tab-btn active" data-tab="团餐">
+            <span class="tab-icon" aria-hidden="true">
+              <img src="images/order/icon-tuancan.png" alt="" width="30" height="30" />
+            </span>
+            <span class="tab-label">团餐</span>
+          </button>
+          <button class="tab-btn" data-tab="流通">
+            <span class="tab-icon" aria-hidden="true">
+              <img src="images/order/icon-liutong.png" alt="" width="30" height="30" />
+            </span>
+            <span class="tab-label">流通</span>
+          </button>
+          <button class="tab-btn" data-tab="海外">
+            <span class="tab-icon" aria-hidden="true">
+              <img src="images/order/icon-haiwai.png" alt="" width="30" height="30" />
+            </span>
+            <span class="tab-label">海外</span>
+          </button>
         </div>
 
         <!-- 右侧卡片 -->

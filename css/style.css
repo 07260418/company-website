@@ -811,50 +811,10 @@ button {
   }
 }
 
-/* 航线地图背景卡片 */
-.map-card {
-  position: relative;
-  background: linear-gradient(160deg, #f8fafc 0%, #eef2f9 100%);
-  border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  padding: 1.25rem;
-  box-shadow:
-    0 4px 6px -1px rgba(15, 23, 42, 0.05),
-    0 18px 40px -12px rgba(15, 23, 42, 0.12);
-  overflow: hidden;
-}
-
-/* 卡片顶部微光装饰 */
-.map-card::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-/* 卡片随 grid 同帧入场：从右侧轻滑入 + 微缩放（html.js 门控，JS 失败时直接可见） */
-html.js .logistics-grid .map-card {
-  opacity: 0;
-  transform: translateX(48px) scale(0.97);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.25, 0.25, 0, 1);
-  will-change: opacity, transform;
-}
-
-html.js .logistics-grid.in-view .map-card {
-  opacity: 1;
-  transform: none;
-}
-
+/* 航线地图 */
 .map-wrap {
   width: 100%;
   height: auto;
-  position: relative;
-  z-index: 1;
 }
 
 .map-wrap svg {
@@ -961,9 +921,14 @@ html.js .logistics-grid.in-view .map-card {
   }
 }
 
+/* Tab 按钮：恢复原来的简洁矩形样式 */
 .tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
   width: 100%;
-  padding: 0.875rem 1rem; /* py-3.5 px-4 */
+  padding: 0.875rem 1rem;
   border-radius: 8px;
   text-align: center;
   font-size: 0.875rem;
@@ -984,6 +949,25 @@ html.js .logistics-grid.in-view .map-card {
   background: #2563eb; /* blue-600 */
   color: #ffffff;
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+/* 按钮内图标：PNG 图标容器 */
+.tab-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain; /* 源图非正方形，contain 保证完整显示不裁切 */
 }
 
 .order-card {
