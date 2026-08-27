@@ -261,13 +261,13 @@ button {
   will-change: transform, opacity;
 }
 
-/* 绿色渐变主圆：极轻微呼吸 */
+/* 蓝-青-绿渐变主圆：极轻微呼吸 */
 .cert-circle {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #14b8a6, #059669, #115e59);
-  box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.3);
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4, #10b981);
+  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.35);
   animation: breath 5s ease-in-out infinite;
 }
 
