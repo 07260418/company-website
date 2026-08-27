@@ -1182,12 +1182,14 @@ button {
 }
 
 .reveal.reveal-right .media-frame img {
-  transform: scale(1.08) translateY(16px);
-  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1.15) translateY(20px);
+  opacity: 0.6;
+  transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
 }
 
 .reveal.reveal-right.in-view .media-frame img {
   transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
 .reveal.in-view {
