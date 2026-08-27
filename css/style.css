@@ -1181,12 +1181,12 @@ button {
   transform: translateX(40px);
 }
 
-.reveal.reveal-right .media-frame {
-  transform: scale(0.88) translateY(20px);
+.reveal.reveal-right .media-frame img {
+  transform: scale(1.08) translateY(16px);
   transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.reveal.reveal-right.in-view .media-frame {
+.reveal.reveal-right.in-view .media-frame img {
   transform: scale(1) translateY(0);
 }
 
