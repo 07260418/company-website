@@ -464,7 +464,7 @@ document.documentElement.classList.add('js');
     {
       name: '检测',
       href: 'testing.html',
-      icon: '<path d="M9 2h6"/><path d="M12 2v6"/><path d="M7.5 10h9"/><circle cx="7.5" cy="14.5" r="2.5"/><circle cx="16.5" cy="14.5" r="2.5"/><path d="M7.5 17v2.5"/><path d="M16.5 17v2.5"/><path d="M5 22h14"/>'
+      icon: '<path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>'
     },
     {
       name: '物流',
@@ -474,7 +474,7 @@ document.documentElement.classList.add('js');
     {
       name: '供应链金融',
       href: 'finance.html',
-      icon: '<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>'
+      icon: '<circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/>'
     },
     {
       name: '线上 B2B2C',
@@ -508,7 +508,7 @@ document.documentElement.classList.add('js');
     'education.html': '教育',
     'testing.html': '检测',
     'logistics.html': '物流',
-    'finance.html': '金融',
+    'finance.html': '供应链金融',
     'b2b2c.html': 'B2B2C',
     'order.html': '订单系统'
   };

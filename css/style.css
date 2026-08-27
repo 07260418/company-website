@@ -95,11 +95,14 @@ button {
   width: 148px;
   height: 44px;
   border-radius: 8px;
+  background-color: #0864f4;
   border: 1px solid #0864f4;
-  color: #0864f4;
+  color: #ffffff;
   font-size: 0.875rem; /* text-sm */
   font-weight: 500;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px -2px rgba(8, 100, 244, 0.45);
+  transform: translateY(-2px);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   vertical-align: middle;
 }
 
@@ -110,8 +113,11 @@ button {
 }
 
 .btn-outline:hover {
-  background-color: #0864f4;
+  background-color: #0652c4;
+  border-color: #0652c4;
   color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px -4px rgba(8, 100, 244, 0.55);
 }
 
 .btn-outline:hover .icon {
@@ -753,16 +759,22 @@ button {
   width: 148px;
   height: 44px;
   border-radius: 8px;
+  background-color: #0864f4;
   border: 1px solid #0864f4;
-  color: #0864f4;
+  color: #ffffff;
   font-size: 0.875rem;
   font-weight: 500;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 14px -2px rgba(8, 100, 244, 0.45);
+  transform: translateY(-2px);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .btn-logistics:hover {
-  background-color: #0864f4;
+  background-color: #0652c4;
+  border-color: #0652c4;
   color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px -4px rgba(8, 100, 244, 0.55);
 }
 
 .btn-logistics.active {
@@ -1491,7 +1503,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.75rem;
   background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
