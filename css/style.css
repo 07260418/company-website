@@ -811,10 +811,50 @@ button {
   }
 }
 
-/* 航线地图 */
+/* 航线地图背景卡片 */
+.map-card {
+  position: relative;
+  background: linear-gradient(160deg, #f8fafc 0%, #eef2f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow:
+    0 4px 6px -1px rgba(15, 23, 42, 0.05),
+    0 18px 40px -12px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+/* 卡片顶部微光装饰 */
+.map-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 卡片随 grid 同帧入场：从右侧轻滑入 + 微缩放（html.js 门控，JS 失败时直接可见） */
+html.js .logistics-grid .map-card {
+  opacity: 0;
+  transform: translateX(48px) scale(0.97);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.25, 0.25, 0, 1);
+  will-change: opacity, transform;
+}
+
+html.js .logistics-grid.in-view .map-card {
+  opacity: 1;
+  transform: none;
+}
+
 .map-wrap {
   width: 100%;
   height: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .map-wrap svg {
